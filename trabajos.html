@@ -14,7 +14,7 @@
     <!-- Google Fonts: Inter & Cinzel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
 
@@ -23,7 +23,7 @@
         body {
             font-family: 'Inter', sans-serif;
             /* Fondo negro sólido */
-            background-color: #000;
+            background-color: #0a0a0a;
         }
         
         /* Transición suave para todos los elementos */
@@ -55,34 +55,57 @@
 
         <!-- Sección de Galería de Trabajos -->
         <section class="my-12">
-            <div class="p-6 md:p-10 max-w-7xl mx-auto">
+            <div class="max-w-7xl mx-auto">
                 
                 <!-- Grilla de imágenes -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Aquí irían las imágenes de tus trabajos. He usado placeholders. -->
-                    <div class="aspect-w-1 aspect-h-1">
-                        <img src="https://placehold.co/600x600/654321/FFFFFF?text=Trabajo+1" alt="[Imagen de trabajo de carpintería 1]" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Trabajo 1 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/35.jpeg-5e885f7b-03a5-4081-aeea-4792919564d4" alt="Cabaña de madera" class="w-full h-full object-cover transform group-hover:scale-110">
+                        </div>
+                        <p class="mt-4 text-gray-300">Cabañas y exteriores a medida.</p>
                     </div>
 
-                    <div class="aspect-w-1 aspect-h-1">
-                        <img src="https://placehold.co/600x600/8B4513/FFFFFF?text=Trabajo+2" alt="[Imagen de trabajo de carpintería 2]" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Trabajo 2 -->
+                    <div class="flex flex-col items-center text-center group">
+                         <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/34.jpeg-f80a6a64-041b-4102-afc8-3d6a4482e111" alt="Juegos de exterior" class="w-full h-full object-cover transform group-hover:scale-110">
+                        </div>
+                        <p class="mt-4 text-gray-300">Juegos de exterior en madera tratada.</p>
                     </div>
                     
-                    <div class="aspect-w-1 aspect-h-1">
-                        <img src="https://placehold.co/600x600/A0522D/FFFFFF?text=Trabajo+3" alt="[Imagen de trabajo de carpintería 3]" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Trabajo 3 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/19.jpeg-30225d40-a8c7-41ba-ae92-fcdba4ce779f" alt="Carrito de eventos" class="w-full h-full object-cover transform group-hover:scale-110">
+                        </div>
+                        <p class="mt-4 text-gray-300">Mobiliario comercial y para eventos.</p>
                     </div>
 
-                    <div class="aspect-w-1 aspect-h-1">
-                        <img src="https://placehold.co/600x600/D2691E/FFFFFF?text=Trabajo+4" alt="[Imagen de trabajo de carpintería 4]" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Trabajo 4 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/13.jpeg-641ff66f-f532-483b-b52c-3dc0eebbc36b" alt="Muebles infantiles" class="w-full h-full object-cover transform group-hover:scale-110">
+                        </div>
+                        <p class="mt-4 text-gray-300">Muebles infantiles multifuncionales.</p>
                     </div>
                     
-                    <div class="aspect-w-1 aspect-h-1">
-                        <img src="https://placehold.co/600x600/5C4033/FFFFFF?text=Trabajo+5" alt="[Imagen de trabajo de carpintería 5]" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Trabajo 5 -->
+                     <div class="flex flex-col items-center text-center group">
+                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/28.jpeg-f98b855d-9ead-4a7c-8c5e-c4cb6be47841" alt="Detalle interior de casa de juegos" class="w-full h-full object-cover transform group-hover:scale-110">
+                        </div>
+                        <p class="mt-4 text-gray-300">Detalles y terminaciones de interior.</p>
                     </div>
 
-                    <div class="aspect-w-1 aspect-h-1">
-                        <img src="https://placehold.co/600x600/704214/FFFFFF?text=Trabajo+6" alt="[Imagen de trabajo de carpintería 6]" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Trabajo 6 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                           <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/40.jpg-59a9a160-1a6d-41da-8c78-d77d9c4dbb8b" alt="Trabajo artesanal con cepillo de madera" class="w-full h-full object-cover transform group-hover:scale-110">
+                        </div>
+                        <p class="mt-4 text-gray-300">La pasión por el trabajo artesanal.</p>
                     </div>
 
                 </div>
@@ -98,4 +121,3 @@
 
 </body>
 </html>
-
