@@ -22,10 +22,10 @@
         /* Estilos personalizados */
         body {
             font-family: 'Inter', sans-serif;
-            /* URL de imagen corregida con troncos de madera apilados */
-            background-image: url('https://images.pexels.com/photos/1250283/pexels-photo-1250283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            /* URL de imagen actualizada con pared de cabaña de troncos */
+            background-image: url('https://images.pexels.com/photos/1094770/pexels-photo-1094770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             /* Color de fondo de respaldo */
-            background-color: #3a2d21;
+            background-color: #4a2e1d;
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -47,9 +47,9 @@
     <main class="container mx-auto p-4 sm:p-6 md:p-8">
 
         <!-- Tarjeta de Presentación -->
-        <div class="flex justify-center items-center min-h-screen">
-            <div class="w-full max-w-md mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl">
-                <div class="p-8 text-center">
+        <section class="flex justify-center items-center min-h-screen">
+            <div class="w-full max-w-md mx-auto text-center">
+                <div class="bg-black bg-opacity-80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl">
                     <h1 class="text-4xl md:text-5xl font-black text-white drop-shadow-lg font-cinzel" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Carpintería Rústica</h1>
                     <p class="text-yellow-100 mt-2" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">El arte de la madera, hecho a mano.</p>
                     
@@ -67,8 +67,15 @@
                         </a>
                     </div>
                 </div>
+                 <!-- Botón para ver trabajos -->
+                <div class="mt-8">
+                     <a href="./trabajos.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-lg shadow-xl transform hover:scale-105">
+                        <i class="fas fa-hammer mr-2"></i>
+                        Ver Nuestros Trabajos
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Sección Nuestra Historia -->
         <section class="my-16 md:my-24">
