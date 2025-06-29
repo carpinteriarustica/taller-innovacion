@@ -34,6 +34,35 @@
         .font-cinzel {
             font-family: 'Cinzel', serif;
         }
+
+        /* Animación para el gradiente dinámico del botón */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .dynamic-gradient-button {
+            background: linear-gradient(-45deg, #c57d56, #8b4513, #5a3825, #c5a690);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* Clase para la rotación del icono del acordeón */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Altura suficiente para el contenido */
+            padding: 1rem 1rem;
+        }
+
     </style>
 </head>
 <body class="bg-black text-white">
@@ -61,51 +90,87 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Trabajo 1 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/35.jpeg-5e885f7b-03a5-4081-aeea-4792919564d4" alt="Cabaña de madera" class="w-full h-full object-cover transform group-hover:scale-110">
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/35.jpeg-5e885f7b-03a5-4081-aeea-4792919564d4" alt="Cabaña de madera" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Diseñamos y construimos estructuras de exterior que se integran con el paisaje. Utilizamos maderas tratadas para resistir las inclemencias del tiempo, garantizando durabilidad y un acabado estético impecable. Ideales para disfrutar de la naturaleza con el máximo confort.</p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-300">Cabañas y exteriores a medida.</p>
                     </div>
 
                     <!-- Trabajo 2 -->
-                    <div class="flex flex-col items-center text-center group">
-                         <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/34.jpeg-f80a6a64-041b-4102-afc8-3d6a4482e111" alt="Juegos de exterior" class="w-full h-full object-cover transform group-hover:scale-110">
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/34.jpeg-f80a6a64-041b-4102-afc8-3d6a4482e111" alt="Juegos de exterior" class="w-full h-56 object-cover">
+                         <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Creamos espacios de diversión seguros y robustos para los más pequeños. Cada juego está fabricado con maderas seleccionadas, sin astillas y con bordes redondeados, aplicando tratamientos no tóxicos para una protección total.</p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-300">Juegos de exterior en madera tratada.</p>
                     </div>
                     
                     <!-- Trabajo 3 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/19.jpeg-30225d40-a8c7-41ba-ae92-fcdba4ce779f" alt="Carrito de eventos" class="w-full h-full object-cover transform group-hover:scale-110">
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/19.jpeg-30225d40-a8c7-41ba-ae92-fcdba4ce779f" alt="Carrito de eventos" class="w-full h-56 object-cover">
+                         <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Desarrollamos piezas únicas y funcionales para negocios que buscan destacar. Desde mostradores hasta carritos temáticos, cada proyecto se planifica para combinar la estética de la marca con la máxima practicidad y durabilidad.</p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-300">Mobiliario comercial y para eventos.</p>
                     </div>
 
                     <!-- Trabajo 4 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/13.jpeg-641ff66f-f532-483b-b52c-3dc0eebbc36b" alt="Muebles infantiles" class="w-full h-full object-cover transform group-hover:scale-110">
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/13.jpeg-641ff66f-f532-483b-b52c-3dc0eebbc36b" alt="Muebles infantiles" class="w-full h-56 object-cover">
+                         <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Mobiliario infantil diseñado para crecer con tus hijos. Piezas versátiles que se transforman para adaptarse a nuevas necesidades, combinando diseño inteligente, seguridad y la calidez de la madera natural.</p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-300">Muebles infantiles multifuncionales.</p>
                     </div>
                     
                     <!-- Trabajo 5 -->
-                     <div class="flex flex-col items-center text-center group">
-                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/28.jpeg-f98b855d-9ead-4a7c-8c5e-c4cb6be47841" alt="Detalle interior de casa de juegos" class="w-full h-full object-cover transform group-hover:scale-110">
+                     <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/28.jpeg-f98b855d-9ead-4a7c-8c5e-c4cb6be47841" alt="Detalle interior de casa de juegos" class="w-full h-56 object-cover">
+                         <div class="p-4 flex flex-col items-center flex-grow">
+                            <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">La magia reside en los pequeños detalles. Cuidamos cada ensamble, pulido y acabado para crear interiores acogedores y llenos de encanto. Cada rincón está pensado para ser tanto bello como funcional.</p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-300">Detalles y terminaciones de interior.</p>
                     </div>
 
                     <!-- Trabajo 6 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
-                           <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/40.jpg-59a9a160-1a6d-41da-8c78-d77d9c4dbb8b" alt="Trabajo artesanal con cepillo de madera" class="w-full h-full object-cover transform group-hover:scale-110">
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/uploaded/40.jpg-59a9a160-1a6d-41da-8c78-d77d9c4dbb8b" alt="Trabajo artesanal con cepillo de madera" class="w-full h-56 object-cover">
+                         <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Creemos en el valor del trabajo manual. Cada viruta de madera cuenta una historia de dedicación y respeto por un oficio ancestral. Esta pasión se refleja en la calidad y el alma de cada una de nuestras creaciones.</p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-300">La pasión por el trabajo artesanal.</p>
                     </div>
 
                 </div>
@@ -118,6 +183,22 @@
         </footer>
 
     </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
