@@ -207,3 +207,894 @@
 
 </body>
 </html>
+```
+
+---
+
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Trabajos - Carpintería Rústica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo negro sólido */
+            background-color: #0a0a0a;
+        }
+        
+        /* Transición suave para todos los elementos */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Animación para el gradiente dinámico del botón */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .dynamic-gradient-button {
+            background: linear-gradient(-45deg, #c57d56, #8b4513, #5a3825, #c5a690);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* Clase para la rotación del icono del acordeón */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Altura suficiente para el contenido */
+            padding: 1rem 1rem;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold font-cinzel text-amber-100">Más Trabajos</h1>
+            <!-- Enlace para volver a la página de "Trabajos" -->
+            <a href="./trabajos.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Volver a la página anterior
+            </a>
+            <!-- Enlace para ir a la siguiente página de "Más Trabajos" -->
+            <a href="./mastrabajos2.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                Siguiente página
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal con padding -->
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+
+        <!-- Sección de Galería de Más Trabajos -->
+        <section class="my-12">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Grilla de imágenes -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Trabajo 7: Casa de juegos exterior -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./1.jpeg" alt="Casa de juegos exterior" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Diseñamos y construimos casas de juegos seguras y divertidas para los más pequeños, ideales para el jardín.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 8: Casa de juegos exterior, vista lateral -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./2.jpeg" alt="Casa de juegos exterior, vista lateral" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Cada casa de juegos es una pequeña obra de arte, con detalles que estimulan la imaginación y garantizan horas de diversión.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 9: Interior de cabaña/estructura de madera -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./3.jpeg" alt="Interior de cabaña/estructura de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Creamos interiores acogedores y funcionales para cabañas o estructuras de madera, optimizando cada espacio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 10: Pérgola o estructura de sombra -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./4.jpeg" alt="Pérgola o estructura de sombra" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Pérgolas y estructuras de sombra diseñadas para embellecer y proteger tus espacios exteriores, perfectas para el relax.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 11: Casa de juegos con tobogán -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./7.jpeg" alt="Casa de juegos con tobogán" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">Casas de juegos integradas con toboganes y elementos divertidos, construidas con la máxima seguridad para los niños.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 12: Interior de cabaña/estructura moderna -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./8.jpeg" alt="Interior de cabaña/estructura moderna" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Diseños modernos para interiores de cabañas, combinando la calidez de la madera con un estilo contemporáneo y funcional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 13: Rincón interior con ventana y encimera -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./9.jpeg" alt="Rincón interior con ventana y encimera" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Rincones acogedores y prácticos, como este espacio con ventana y encimera, ideales para lectura o trabajo ligero.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 14: Barra de madera con detalles -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./10.jpeg" alt="Barra de madera con detalles" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Barras de madera con acabados detallados, perfectas para cocinas, bares o espacios de entretenimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 15: Mueble/estructura de madera con cajones -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./11.jpeg" alt="Mueble/estructura de madera con cajones" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Muebles y estructuras de almacenamiento con cajones, diseñados para combinar estética y máxima funcionalidad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 16: Cuna de madera -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./12.jpeg" alt="Cuna de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Cunas de madera seguras y hermosas, diseñadas para el confort y el descanso de los más pequeños.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 17: Pasillo exterior/entrada con detalles de madera -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./14.jpeg" alt="Pasillo exterior/entrada con detalles de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">Diseñamos entradas y pasillos exteriores con detalles de madera que aportan calidez y un estilo único a tu hogar.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 18: Mueble con estantes y detalles de madera -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./15.jpeg" alt="Mueble con estantes y detalles de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Muebles versátiles con estantes y detalles de madera, ideales para organizar y decorar cualquier espacio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-sm mt-16 pb-4">
+            <p>&copy; 2024 Carpintería Rústica. Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
+
+---
+
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Trabajos - Carpintería Rústica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo negro sólido */
+            background-color: #0a0a0a;
+        }
+        
+        /* Transición suave para todos los elementos */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Animación para el gradiente dinámico del botón */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .dynamic-gradient-button {
+            background: linear-gradient(-45deg, #c57d56, #8b4513, #5a3825, #c5a690);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* Clase para la rotación del icono del acordeón */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Altura suficiente para el contenido */
+            padding: 1rem 1rem;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold font-cinzel text-amber-100">Más Trabajos</h1>
+            <!-- Enlace para volver a la página anterior de "Más Trabajos 1" -->
+            <a href="./mastrabajos1.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Volver a la página anterior
+            </a>
+            <!-- Nuevo enlace para ir a la página siguiente -->
+            <a href="./mastrabajos3.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                Siguiente página
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal con padding -->
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+
+        <!-- Sección de Galería de Más Trabajos 2 -->
+        <section class="my-12">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Grilla de imágenes: Ajustado para una distribución más equilibrada -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Trabajo 19 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./16.jpeg" alt="Banco de entrada de madera" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Bancos de entrada funcionales y estéticos, ideales para organizar tu recibidor. Con espacio de almacenamiento y un diseño que da la bienvenida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 20 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./17.jpeg" alt="Mesa auxiliar de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Mesas auxiliares versátiles para cualquier rincón de tu hogar. Pequeñas piezas con gran impacto, combinando funcionalidad y diseño rústico.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 21 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./18.jpeg" alt="Silla artesanal de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Sillas artesanales que combinan comodidad y estilo. Cada silla es una obra de arte, elaborada con maderas seleccionadas y un diseño ergonómico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 22 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./20.jpeg" alt="Panel decorativo de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Paneles decorativos que añaden textura y profundidad a tus paredes. Diseños únicos para crear puntos focales y ambientes con carácter.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 23 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./21.jpeg" alt="Cama infantil de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">Camas infantiles seguras y divertidas, diseñadas para estimular la imaginación de los más pequeños. Fabricadas con maderas no tóxicas y acabados suaves.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 24 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./30.jpeg" alt="Cajonera rústica de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Cajoneras y cómodas rústicas, ideales para organizar y decorar cualquier habitación. Con gran capacidad de almacenamiento y un diseño atemporal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 25 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./31.jpeg" alt="Mueble de TV rústico" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Muebles de TV que combinan funcionalidad y estética. Diseños robustos con espacio para todos tus dispositivos, aportando un toque rústico a tu sala.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 26 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./32.jpeg" alt="Espejo con marco de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Espejos con marcos de madera artesanales, ideales para cualquier habitación. Piezas que amplían el espacio y añaden un toque de elegancia rústica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 27 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./33.jpeg" alt="Mueble de cocina rústico" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Muebles de cocina a medida, combinando la funcionalidad moderna con el encanto rústico de la madera natural.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 28 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./36.jpeg" alt="Estantería flotante de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Estanterías flotantes que maximizan el espacio y añaden un toque minimalista con la calidez de la madera.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 29 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./37.jpeg" alt="Banco de jardín de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">Bancos de jardín robustos y cómodos, ideales para disfrutar de tus espacios exteriores con estilo y durabilidad.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 30 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./38.jpeg" alt="Mesa auxiliar de exterior" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Mesas auxiliares para exterior, perfectas para complementar tus muebles de jardín y ofrecer un espacio práctico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-sm mt-16 pb-4">
+            <p>&copy; 2024 Carpintería Rústica. Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
+
+---
+
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Trabajos - Carpintería Rústica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo negro sólido */
+            background-color: #0a0a0a;
+        }
+        
+        /* Transición suave para todos los elementos */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Animación para el gradiente dinámico del botón */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .dynamic-gradient-button {
+            background: linear-gradient(-45deg, #c57d56, #8b4513, #5a3825, #c5a690);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* Clase para la rotación del icono del acordeón */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Altura suficiente para el contenido */
+            padding: 1rem 1rem;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold font-cinzel text-amber-100">Más Trabajos</h1>
+            <!-- Enlace para volver a la página anterior -->
+            <a href="./mastrabajos2.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Volver a la página anterior
+            </a>
+            <!-- Botón para volver a Inicio -->
+            <a href="./index.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                <i class="fas fa-home mr-2"></i>
+                Volver a Inicio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal con padding -->
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+
+        <!-- Sección de Galería de Más Trabajos 3 -->
+        <section class="my-12">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Grilla de imágenes: Ajustado para una distribución más equilibrada -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Trabajo 31 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./39.jpeg" alt="Casa de juegos elevada con escaleras" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Casas de juegos elevadas con estructuras de escalada y toboganes, diseñadas para la aventura y la seguridad de los niños.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 32 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./41.jpeg" alt="Barco de madera para juegos" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Barcos de madera temáticos para juegos, ideales para estimular la imaginación y crear un espacio de fantasía en el jardín.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 33 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./42.jpeg" alt="Estantería o separador de ambientes de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Estanterías y separadores de ambientes de madera, diseñados para crear espacios funcionales y estéticos en cualquier hogar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 34 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./43.jpeg" alt="Estructura de juegos con escalada y tobogán" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Estructuras de juegos completas con áreas de escalada, toboganes y puentes, construidas para la diversión al aire libre.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 35 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./45.jpeg" alt="Carro o vehículo de juguete de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">Carros y vehículos de juguete de madera, hechos a mano con materiales seguros y duraderos para la diversión de los niños.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 36 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="./46.jpeg" alt="Camión de juguete de madera" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Camiones de juguete de madera, diseñados para el juego imaginativo y construidos para resistir el uso diario.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 37 (Placeholder) -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/5A3825/FFFFFF?text=Mueble+de+Exterior+Personalizado" alt="Mueble de Exterior Personalizado" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Mobiliario de exterior diseñado a medida para crear ambientes únicos y funcionales en tu jardín o terraza.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 38 (Placeholder) -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Puerta+Rustica+a+Medida" alt="Puerta Rústica a Medida" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Puertas rústicas personalizadas que combinan la robustez de la madera con diseños que realzan la entrada de tu hogar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 39 (Placeholder) -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/A0522D/FFFFFF?text=Armario+de+Almacenamiento" alt="Armario de Almacenamiento" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Armarios de almacenamiento diseñados para maximizar el espacio y mantener la organización, con un estilo rústico y elegante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 40 (Placeholder) -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/CD853F/FFFFFF?text=Mesa+de+Noche+Rustica" alt="Mesa de Noche Rústica" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Mesas de noche rústicas que añaden un toque de calidez y funcionalidad a tu dormitorio, con acabados naturales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 41 (Placeholder) -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/D2B48C/000000?text=Estante+de+Pared+Decorativo" alt="Estante de Pared Decorativo" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">Estantes de pared decorativos que combinan funcionalidad y estilo, ideales para exhibir objetos y libros.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 42 (Placeholder) -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/F4A460/000000?text=Mesa+de+Juegos+Infantil" alt="Mesa de Juegos Infantil" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Mesas de juegos infantiles diseñadas para la creatividad y la diversión, con materiales seguros y duraderos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-sm mt-16 pb-4">
+            <p>&copy; 2024 Carpintería Rústica. Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
