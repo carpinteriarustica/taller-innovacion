@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Trabajos 2 - Carpintería Rústica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo negro sólido */
+            background-color: #0a0a0a;
+        }
+        
+        /* Transición suave para todos los elementos */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Animación para el gradiente dinámico del botón */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .dynamic-gradient-button {
+            background: linear-gradient(-45deg, #c57d56, #8b4513, #5a3825, #c5a690);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* Clase para la rotación del icono del acordeón */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Altura suficiente para el contenido */
+            padding: 1rem 1rem;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold font-cinzel text-amber-100">Más Trabajos 2</h1>
+            <!-- Enlace para volver a la página anterior de "Más Trabajos 1" -->
+            <a href="./mastrabajos1.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Volver a Más Trabajos 1
+            </a>
+            <!-- Enlace para ir a la siguiente página de "Más Trabajos 3" -->
+            <a href="./mastrabajos3.html" class="text-white bg-amber-700 hover:bg-amber-800 py-2 px-4 rounded-lg flex items-center">
+                Más Trabajos 3
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal con padding -->
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+
+        <!-- Sección de Galería de Más Trabajos 2 -->
+        <section class="my-12">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Grilla de imágenes: Ajustado para una distribución más equilibrada -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Trabajo 21 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Mueble+Personalizado+1" alt="Mueble personalizado 1" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Creamos muebles a medida que se adaptan perfectamente a tu espacio y estilo, con un diseño único y materiales de alta calidad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 22 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/A0522D/FFFFFF?text=Mueble+Personalizado+2" alt="Mueble personalizado 2" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Cada pieza es diseñada pensando en la funcionalidad y la estética, garantizando un mueble duradero y con carácter.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 23 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/CD853F/FFFFFF?text=Mueble+Personalizado+3" alt="Mueble personalizado 3" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Desde estanterías hasta mesas, cada proyecto se realiza con atención al detalle y un acabado impecable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 24 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/D2B48C/000000?text=Mueble+Personalizado+4" alt="Mueble personalizado 4" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Transformamos tus ideas en piezas de madera únicas que realzan la belleza de tu hogar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 25 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/F4A460/000000?text=Mueble+Personalizado+5" alt="Mueble personalizado 5" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">La calidez de la madera se combina con diseños modernos o rústicos, según tus preferencias.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 26 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/B8860B/FFFFFF?text=Mueble+Personalizado+6" alt="Mueble personalizado 6" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Desde el concepto inicial hasta la instalación, te acompañamos en la creación de tu mueble ideal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 27 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/5A3825/FFFFFF?text=Mueble+Personalizado+7" alt="Mueble personalizado 7" class="w-full h-56 object-cover">
+                        <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Utilizamos maderas de origen sostenible y técnicas artesanales para garantizar la calidad y durabilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 28 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Mueble+Personalizado+8" alt="Mueble personalizado 8" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Diseñamos soluciones inteligentes para espacios pequeños o grandes, optimizando cada rincón.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 29 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/A0522D/FFFFFF?text=Mueble+Personalizado+9" alt="Mueble personalizado 9" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">La versatilidad de la madera nos permite crear desde piezas clásicas hasta diseños vanguardistas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 30 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/CD853F/FFFFFF?text=Mueble+Personalizado+10" alt="Mueble personalizado 10" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Cada mueble es una inversión en calidad y belleza que perdurará por generaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trabajo 31 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/D2B48C/000000?text=Mueble+Personalizado+11" alt="Mueble personalizado 11" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                                <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                    <span class="mr-2">Ver Detalles</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content text-left">
+                                    <p class="text-gray-400">La personalización es clave: elige el tipo de madera, el acabado y los detalles que desees.</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 32 -->
+                    <div class="flex flex-col text-center bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/600x400/F4A460/000000?text=Mueble+Personalizado+12" alt="Mueble personalizado 12" class="w-full h-56 object-cover">
+                           <div class="p-4 flex flex-col items-center flex-grow">
+                             <button class="accordion-toggle dynamic-gradient-button text-white font-bold py-2 px-6 rounded-full flex items-center justify-center w-auto mb-3">
+                                <span class="mr-2">Ver Detalles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content text-left">
+                                <p class="text-gray-400">Desde cocinas completas hasta pequeños accesorios, todo es posible con la carpintería rústica.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-sm mt-16 pb-4">
+            <p>&copy; 2024 Carpintería Rústica. Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
